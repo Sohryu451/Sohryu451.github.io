@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html>
 
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+</script>
+  
 <head>
   <title>Sohryu</title>
   <link rel= "shortcut icon" type="x-icon" href="./figures/icon.jpg">
@@ -29,63 +59,7 @@
 </h2>
 </div>
 
-<div class="center">
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://thangs.com/search/evangelion?scope=all&fileTypes=stl&freeModels=true')" ;>3D Model Community
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://www.prusa3d.com/page/prusaslicer_424/')" ;>PrusaSlicer
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://www.overleaf.com/')" ;>LaTeX
-  </button>
-</div>
-<div class="center">
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic')" ;>html
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://www.freecad.org')" ;>FreeCad
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://www.onlyoffice.com')" ;>OnlyOffice
-  </button>
-</div>
-<div class="center">
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://www.artstation.com/aenamiart')" ;>Alena Aenami
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://archillect.com/tv')" ;>archillect
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://libgen.is/')" ;>libgen
-  </button>
-</div>
-<div class="center">
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://annas-archive.org')" ;>Annas Archive
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://osintframework.com')" ;>OSINT Framework
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://sci-hub.se/')" ;>Sci Hub
-  </button>
-</div>
-<div class="center">
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://homeworkify.net')" ;>Homeworkify
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://prnt.sc')" ;>LightShot
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://octave-online.net')" ;>Octave Online
-  </button>
-</div>
-<div class="center">
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://www.wolframalpha.com')" ;>Wolfram Alpha
-  </button>
-
-  <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://www.photopea.com')" ;>Photopea
-  </button>
-</div>
+<div w3-include-html="sohryu/00_usefullink.html"></div>
 
 <! –– html settings ––>
 
