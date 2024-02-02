@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+<div>
 <div class="center">
   <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://thangs.com/search/evangelion?scope=all&fileTypes=stl&freeModels=true')" ;>3D Model Community
   </button>
@@ -55,3 +58,92 @@
   <button class="button button2" class= "center" target="_blank" onclick= "window.open('https://www.photopea.com')" ;>Photopea
   </button>
 </div>
+</div>
+
+<! –– html settings ––>
+
+<style>
+a:link {
+  color: #04AA6D;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+body { 
+
+  background-color: #24292e;
+}
+
+div {
+  text-align: justify;
+  text-justify: inter-word;
+  color: #e6edf3;
+  margin: 35px 70px;
+  font-family: Times New Roman;
+  line-height: 0;
+}
+
+.button {
+  border: none;
+  color: #24292e;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 250px;
+  height: 55px;
+  border-radius: 12px;
+}
+
+.button1 {
+  background-color: #24292e; 
+  color: #e6edf3; 
+  border: 2px solid #04AA6D;
+}
+
+.button1:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.button2 {
+  background-color: #24292e; 
+  color: #e6edf3; 
+  border: 2px solid red;
+}
+
+.button2:hover {
+  background-color: red;
+  color: white;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+
+</html>
