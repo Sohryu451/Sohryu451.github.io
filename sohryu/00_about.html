@@ -85,7 +85,7 @@ body {
   background-color: #24292e;
 }
 
-p, h1 {
+p, h1, ol {
   text-align: justify;
   text-justify: inter-word;
   color: #e6edf3;
@@ -103,6 +103,7 @@ p, h1 {
 .navbar {
   overflow: hidden;
   background-color: #24292e;
+  border: 3px solid #353f4a;
 }
 
 .navbar a {
@@ -131,13 +132,13 @@ p, h1 {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #24292e;
+  background-color: #353f4a;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #24292e;
+  background-color: #353f4a;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -166,6 +167,25 @@ img {
   margin-right: auto;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #353f4a; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 </style>
 
 </html>
