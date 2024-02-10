@@ -5,66 +5,35 @@
   <title>Sohryu</title>
   <link rel= "shortcut icon" type="x-icon" href="https://github.com/Sohryu451/Sohryu451.github.io/blob/main/figures/icon.jpg?raw=true">
 </head>
-<body>
 
-<div class="navbar">
-  <a href="https://sohryu451.github.io/">Home</a>
-  
-  <div class="dropdown">
-    <button class="dropbtn">Sohryu's Documents 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="https://sohryu451.github.io/sohryu/01_musics">Sohryu's Favorite Musics</a>
-      <a href="https://myanimelist.net/animelist/Sohryu451?status=7&order=4&order2=0">MyAnimeList</a>
-    </div>
-  </div> 
-    
-    <div class="dropdown">
-    <button class="dropbtn">Useful Links 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="https://thangs.com/search/evangelion?scope=all&fileTypes=stl&freeModels=true">3D Model Community</a>
-      <a href="https://www.prusa3d.com/page/prusaslicer_424/">PrusaSlicer</a>
-      <a href="https://www.overleaf.com/">LaTeX</a>
-      <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic">html</a>
-      <a href="https://www.freecad.org">FreeCad</a>
-      <a href="https://www.onlyoffice.com">OnlyOffice</a>
-      <a href="https://www.artstation.com/aenamiart">Alena Aenami</a>
-      <a href="https://archillect.com/tv">Archillect</a>
-      <a href="https://libgen.is/">Libgen</a>
-      <a href="https://annas-archive.org">Annas Archive</a>
-      <a href="https://osintframework.com">OSINT Framework</a>
-      <a href="https://sci-hub.se/">Sci-Hub</a>
-      <a href="https://octave-online.net">Octave Online</a>
-      <a href="https://www.wolframalpha.com">WolframAlpha</a>
-      <a href="https://www.photopea.com">Photopea</a>
-    </div>
-  </div> 
-    <a href="https://sohryu451.github.io/sohryu/00_about">About</a>
+<div class="main">
+  <body>
+    <figure>
+      <img src="https://github.com/Sohryu451/Sohryu451.github.io/blob/main/figures/icon.jpg?raw=true" style=width:15%;>
+    </figure>
+    <center>
+    <br>
+    <h1>Sohryu</h1>
+    <br>
+    <br>
+    <p>The man who sold the world.</p>
+    <br>
+    <br>
+    <p>enis.mutlu.042@gmail.com</p>
+    </center>
+  </body>
 </div>
-
-<figure>
-  <img src="https://github.com/Sohryu451/Sohryu451.github.io/blob/main/figures/icon.jpg?raw=true" style=width:25%;>
-</figure>
-<h1 class="center">Sohryu</h1>
-<p class="center">The man who sold the world.</p>
-<p class="center">enis.mutlu.042@gmail.com</p>
-
-</body>
-
+  <div class="navbar">
+    <a href="https://sohryu451.github.io/">Home</a>
+    <a href="https://sohryu451.github.io/sohryu/sohryusdocuments">Sohryu's Documents </a>
+    <a href="https://sohryu451.github.io/sohryu/usefullinks">Useful Links</a>
+    <a href="https://sohryu451.github.io/sohryu/about">About</a>
+  </div>
 <! –– html settings ––>
 
 <style>
 a:link {
   color: #04AA6D;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: pink;
   background-color: transparent;
   text-decoration: none;
 }
@@ -83,82 +52,15 @@ a:active {
 
 body { 
   background-color: #24292e;
+  margin:0;
 }
 
 p, h1, ol {
-  text-align: justify;
   text-justify: inter-word;
   color: #e6edf3;
-  margin: 35px 75px;
+  max-width: 500px;
+  margin: auto;
   font-family: Times New Roman;
-  line-height: 1.6;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: #24292e;
-  border: 3px solid #353f4a;
-}
-
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #353f4a;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #353f4a;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #24292e;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 img {
@@ -185,6 +87,33 @@ img {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #353f4a;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #24292e;
+  color: white;
+}
+
+.main {
+  margin-top: 60px;
 }
 </style>
 
