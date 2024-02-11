@@ -1,4 +1,4 @@
-w3.includeHTML = function(cb) {
+function includeHTML() {
   var z, i, elmnt, file, xhttp;
   z = document.getElementsByTagName("*");
   for (i = 0; i < z.length; i++) {
@@ -11,13 +11,12 @@ w3.includeHTML = function(cb) {
           if (this.status == 200) {elmnt.innerHTML = this.responseText;}
           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
           elmnt.removeAttribute("w3-include-html");
-          w3.includeHTML(cb);
+          includeHTML();
         }
-      }      
+      }
       xhttp.open("GET", file, true);
       xhttp.send();
       return;
     }
   }
-  if (cb) cb();
-};
+}
