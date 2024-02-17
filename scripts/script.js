@@ -22,3 +22,24 @@ w3.includeHTML = function(cb) {
   }
   if (cb) cb();
 };
+
+fetch("music.json")
+.then(function(response){
+   return response.json();
+})
+.then(function(music){
+   let placeholder = document.querySelector("#data-output");
+   let out = "";
+   for(let music of music){
+      out += `
+         <tr>
+            <td>${music.order}</td>
+            <td>${music.trackName}</td>
+            <td>${music.artistName}</td>
+            <td>${music.albumName}</td>
+         </tr>
+      `;
+   }
+ 
+   placeholder.innerHTML = out;
+});
