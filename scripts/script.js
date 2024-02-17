@@ -22,15 +22,3 @@ w3.includeHTML = function(cb) {
   }
   if (cb) cb();
 };
-
-function getTH() {
-  const column = Object.keys(Data[0]);
-  const head = document.querySelector('thead');
-  let tags = "<tr>";
-  for(i = 0; i <column.length; i++) {
-    tags += '<th>${column[i]}</th>";
-  }
-  tags += "</tr>"
-  head.innerHTML = tags;
-}
-get TH();
