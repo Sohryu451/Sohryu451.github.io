@@ -10,7 +10,7 @@ body {
   padding: 16px;
   margin-top: 48px;
   margin-bottom: 0px;
-  background-color: white;
+  background-color: #24292e;
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
@@ -52,7 +52,7 @@ img {
 .navbar {
   overflow: hidden;
   background-color: #353f4a;
-  max-height: 68px;
+  height: 48px;
   position:fixed;
   top:0;
   left:0;
