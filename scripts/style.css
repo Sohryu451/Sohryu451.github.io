@@ -17,7 +17,7 @@ body {
   margin-right: auto;
 }
 
-p, h1 {
+.maintext {
   text-align: justify;
   text-justify: inter-word;
   color: #e6edf3;
