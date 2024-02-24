@@ -15,9 +15,6 @@ body {
   width: 480px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.maintext {
   text-align: justify;
   text-justify: inter-word;
   color: #e6edf3;
