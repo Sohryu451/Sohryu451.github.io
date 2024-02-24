@@ -8,6 +8,7 @@ body {
   background-attachment: fixed;  
   background-size: cover;
   background-color: #24292e;
+  margin-left: 10px;
   margin:0;
 }
 
@@ -52,6 +53,7 @@ body {
 
 .navbar a {
   float: left;
+  margin-left: 10px;
   font-size: 16px;
   color: white;
   text-align: center;
