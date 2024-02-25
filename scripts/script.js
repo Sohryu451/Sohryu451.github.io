@@ -22,3 +22,11 @@ w3.includeHTML = function(cb) {
   }
   if (cb) cb();
 };
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
