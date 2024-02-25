@@ -1,24 +1,27 @@
-var w3 = {};
-w3.includeHTML = function(cb) {
+function includeHTML() {
   var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
   z = document.getElementsByTagName("*");
   for (i = 0; i < z.length; i++) {
     elmnt = z[i];
+    /*search for elements with a certain attribute:*/
     file = elmnt.getAttribute("w3-include-html");
     if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
           if (this.status == 200) {elmnt.innerHTML = this.responseText;}
           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
           elmnt.removeAttribute("w3-include-html");
-          w3.includeHTML(cb);
+          includeHTML();
         }
       }      
       xhttp.open("GET", file, true);
       xhttp.send();
+      /*exit the function:*/
       return;
     }
   }
-  if (cb) cb();
 };
