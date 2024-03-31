@@ -1,0 +1,65 @@
+$menu-item-height: 41px;
+$menu-item-spacing: 16px;
+
+body {
+  font-size: 100%;
+  background: #24292e;
+  color: #fff;
+}
+
+.ul--reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vertical-menu {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  width: 220px;  // Avoid jitter on menu item click
+}
+
+.vertical-menu-wrapper {
+  max-width: 230px;
+  margin: 50px auto;
+  display: flex;
+  position: relative;
+}
+
+.active-marker {
+  // Initially, this is positioned so that the first menu item is shown as active.
+  transition: transform 0.4s;
+  width: 5px;
+  background-image: linear-gradient(90deg, #ff5e5e, #f54985);
+  background-size: 100%;
+  height: 30px;
+  margin-left: 7px;
+  transform: translateY(0px);
+}
+
+.vertical-menu-item {
+  font-size: 1.1em;
+  color: #fff;
+  transition: all 0.4s;
+  height: $menu-item-height;  // Define height here to ensure no spacing change on hover effect
+  text-align: right;
+
+  &.is-active {
+    // Note: it's better to use scale or another property change when possible (things that don't trigger repaints) vs font size changes in a transition.
+    font-size: 1.4em;
+  }
+}
+
+.link--inverse-menu {
+  color: #fff;
+  text-decoration: none;
+
+  &:visited {
+    color: #fff;
+  }
+
+  &:hover,
+  &:active {
+    color: #d3d3d3;
+  }
+}
