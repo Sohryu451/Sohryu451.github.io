@@ -62,8 +62,6 @@ body {
 }
 
 .active-marker {
-  // Initially, this is positioned so that the first menu item is shown as active.
-  transition: transform 0.4s;
   width: 5px;
   background-image: linear-gradient(90deg, #ff5e5e, #f54985);
   background-size: 100%;
@@ -76,13 +74,8 @@ body {
   font-size: 1.1em;
   color: #fff;
   transition: all 0.4s;
-  height: $menu-item-height;  // Define height here to ensure no spacing change on hover effect
+  height: $menu-item-height;
   text-align: right;
-
-  &.is-active {
-    // Note: it's better to use scale or another property change when possible (things that don't trigger repaints) vs font size changes in a transition.
-    font-size: 1.4em;
-  }
 }
 
 .link--inverse-menu {
