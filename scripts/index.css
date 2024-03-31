@@ -1,93 +1,52 @@
-$menu-item-height: 41px;
-$menu-item-spacing: 16px;
-
-html {
-  overflow-y: scroll;
-}
-
-body { 
-  background-image: url("../figures/background.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-  background-color: #24292e;
-  margin:0;
-}
-
-.main {
-  padding: 60px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  background-color: #24292e;
-  width: 420px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: justify;
-  text-justify: inter-word;
-  color: #e6edf3;
-  font-family: Times New Roman;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
-.ul--reset {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.vertical-menu {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  width: 220px;  // Avoid jitter on menu item click
-}
-
-.vertical-menu-wrapper {
-  max-width: 230px;
-  margin: 50px auto;
+body {
   display: flex;
-  position: relative;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #24292e;
 }
 
-.active-marker {
-  width: 5px;
-  background-image: linear-gradient(90deg, #ff5e5e, #f54985);
-  background-size: 100%;
-  height: 30px;
-  margin-left: 7px;
-  transform: translateY(0px);
-}
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
 
-.vertical-menu-item {
-  font-size: 1.1em;
-  color: #fff;
-  transition: all 0.4s;
-  height: $menu-item-height;
-  text-align: right;
-}
+  li {
+    padding: 6px 0;
 
-.link--inverse-menu {
-  color: #fff;
-  text-decoration: none;
+    a {
+      position: relative;
+      display: block;
+      padding: 4px 0;
+      font-family: Lato, sans-serif;
+      color: #ecf0f1;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.5s;
 
-  &:visited {
-    color: #fff;
-  }
+      &::after {
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #9e34db;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+      }
 
-  &:hover,
-  &:active {
-    color: #d3d3d3;
+      &:hover {
+        color: #95a5a6;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
   }
 }
